@@ -1,0 +1,525 @@
+// to compensate for missing color variables
+@import "~bootstrap/scss/bootstrap";
+
+// to apply roboto fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+// the rest of the unavailable colors in this sheet
+$transparent-black: rgba(0, 0, 0, 0.5);
+$transparent-black-2: rgba(0, 0, 0, 0.7);
+$gainsboro: #DCDCDC;
+$gainsboro-2: #DCDCDC;
+$crimson: #DC143C;
+$peach-puff: #DCDCDC;
+$coral:  #FF7F50;
+$light-goldenrod-yellow:  #dce775;
+$lawn-green:  #00FF92;
+$white-smoke:  #F5F5F5;
+$forest-green:  #5cbe3e;
+$lavender:  #E6E6FA;
+
+// mixins of which came from unknown sources?
+@mixin roboto-32-bold() {
+  font-family: 'Roboto', sans-serif;
+  font-size: 32pt;
+  font-weight: 700;
+}
+
+@mixin roboto-18-bold() {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14pt;
+  font-weight: 700;
+}
+
+@mixin roboto-16-bold() {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16pt;
+  font-weight: 700;
+}
+
+@mixin roboto-16-bold-1() {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16pt;
+  font-weight: 700;
+}
+
+@mixin roboto-16-bold-line23() {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16pt;
+  font-weight: 700;
+}
+
+@mixin roboto-14-bold() {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14pt;
+  font-weight: 700;
+}
+
+@mixin roboto-18-regular() {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18pt;
+  font-weight: 400;
+}
+
+@mixin roboto-16-regular() {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16pt;
+  font-weight: 400;
+}
+
+@mixin roboto-16-regular-1() {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16pt;
+  font-weight: 400;
+}
+
+@mixin roboto-16-regular-line23() {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16pt;
+  font-weight: 400;
+}
+
+@mixin roboto-14-regular() {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14pt;
+  font-weight: 400;
+}
+
+.bjsDashboard {
+  background-color: $white;
+  border-radius: 20px 20px 0px 0px;
+  padding: 30px 29px 15px 46px;
+  box-shadow: 0 0 30px 0 $transparent-black;
+  display: flex;
+  align-items: flex-start;
+}
+.leftSection {
+  margin-top: 23px;
+  margin-right: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.profileSection {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.profileContainer {
+  margin-bottom: 27px;
+  display: flex;
+  align-items: flex-start;
+}
+.profilePicture {
+  margin-right: 20px;
+  padding: 0 0 1px;
+  position: relative;
+}
+.ellipse9 {
+  width: 71px;
+  height: 71px;
+  background-color: $gainsboro-2;
+  border-radius: 50%;
+  position: relative;
+}
+.vector {
+  position: absolute;
+  left: 14px;
+  bottom: 0;
+}
+.profilInfoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.profilName {
+  @include roboto-32-bold;
+  color: rgba(0, 0, 0, 1);
+  margin-bottom: 5px;
+}
+.parcelsPendingContainer {
+  display: flex;
+  align-items: center;
+}
+.firstPart {
+  @include roboto-18-regular;
+  color: rgba(0, 0, 0, 1);
+  &:not(:last-of-type) {
+    margin-right: 5px;
+  }
+}
+.parcelsPendingCount {
+  background-color: $pink;
+  margin-right: 5px;
+  border-radius: 50%;
+  padding: 3px 6px 2px;
+  display: flex;
+  align-items: center;
+}
+.parcelPendingCount {
+  @include roboto-14-bold;
+  color: rgba(204, 0, 51, 1);
+  text-align: center;
+}
+.recentOrdersTitleContainer {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.recentOrderTitle {
+  @include roboto-18-bold;
+  color: rgba(204, 0, 51, 1);
+}
+.viewAllContainer {
+  padding: 0 6px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.viewAll {
+  @include roboto-14-regular;
+  color: rgba(1, 1, 1, 1);
+  margin-right: 13px;
+}
+.angleDoubleUp {
+  transform: rotate(90deg);
+}
+.recentOrdersTable {
+  border-radius: 10px;
+  padding: 9px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid $gainsboro;
+}
+.tableHeadings {
+  margin-bottom: 7px;
+  padding: 0 0 0 18px;
+  display: flex;
+  align-items: center;
+  width: 437px;
+}
+.tabTitle {
+  @include roboto-16-bold;
+  color: rgba(0, 0, 0, 1);
+  &:not(:last-of-type) {
+    margin-right: 40px;
+  }
+}
+.tableRowDelimiter {
+  width: 100%;
+  height: 1px;
+  background-color: $gainsboro;
+  margin-bottom: 6px;
+}
+.tableRow {
+  padding: 0 23px 0 18px;
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  &:not(:last-of-type) {
+    margin-bottom: 7px;
+  }
+}
+.date {
+  width: 90px;
+  @include roboto-16-regular;
+  color: rgba(0, 0, 0, 1);
+  margin-right: 23px;
+}
+.price {
+  width: 50px;
+  @include roboto-16-regular;
+  color: rgba(0, 0, 0, 1);
+  margin-right: 23px;
+}
+.packingLabel {
+  background-color: $pink;
+  margin-right: 23px;
+  border-radius: 10px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+}
+.redDot {
+  width: 6px;
+  height: 6px;
+  background-color: $crimson;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+.packingText {
+  width: 69px;
+  @include roboto-14-regular;
+  color: rgba(204, 0, 51, 1);
+  text-transform: uppercase;
+}
+.detailsLink {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+.textLink {
+  @include roboto-14-regular;
+  color: rgba(204, 0, 51, 1);
+  flex: 1;
+  text-align: right;
+  margin-right: 15px;
+}
+.inTransitLabel {
+  background-color: $peach-puff;
+  margin-right: 23px;
+  border-radius: 10px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+}
+.orangeDot {
+  width: 6px;
+  height: 6px;
+  background-color: $coral;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+.inTransitText {
+  @include roboto-14-regular;
+  color: rgba(248, 139, 38, 1);
+  text-transform: uppercase;
+}
+.deliveredLabel {
+  background-color: $light-goldenrod-yellow;
+  margin-right: 23px;
+  border-radius: 10px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+}
+.greenDot {
+  width: 6px;
+  height: 6px;
+  background-color: $lawn-green;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+.deliveredText {
+  @include roboto-14-regular;
+  color: rgba(139, 204, 0, 1);
+  text-transform: uppercase;
+}
+.questionTabs {
+  margin-bottom: 14px;
+  padding: 0 0 0 4px;
+  display: flex;
+  align-items: flex-start;
+}
+.topQuestions {
+  @include roboto-18-bold;
+  color: rgba(204, 0, 51, 1);
+  margin-right: 40px;
+}
+.yourQuestionHistory {
+  @include roboto-18-regular;
+  color: rgba(124, 124, 124, 1);
+}
+.group5 {
+  padding: 6px 25px 1px 0;
+  position: relative;
+}
+.frame3 {
+  padding: 0 82px 0 0;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+.questionContainer {
+  background-color: $white-smoke;
+  border-radius: 10px;
+  padding: 11px 7px 12px 9px;
+  display: flex;
+  align-items: center;
+  border: 1px solid $gainsboro;
+  &:not(:last-of-type) {
+    margin-right: 12px;
+  }
+}
+.doYouOfferSameDayDelivery {
+  width: 159px;
+  @include roboto-16-bold-line23;
+  color: rgba(0, 0, 0, 1);
+  & .doYouOfferSameDayDeliveryEmphasis1 {
+    @include roboto-16-regular-line23;
+    color: rgba(0, 0, 0, 1);
+  }
+}
+.group4 {
+  padding: 28px 19px 22px 0;
+  display: flex;
+  align-items: flex-start;
+  background: linear-gradient(
+    90deg,
+    $white 70%,
+    $white 100%,
+    $white 113%
+  );
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.carrouselButton {
+  background-color: $transparent-black-2;
+  border-radius: 50%;
+  padding: 6px 10px 5px 11px;
+  display: flex;
+  align-items: center;
+}
+.sectionDelimiter {
+  width: 1px;
+  height: 635px;
+  background-color: $gainsboro;
+  margin-right: 37px;
+}
+.relativeWrapperOne {
+  position: relative;
+}
+.closeIconButton {
+  position: absolute;
+  right: -3px;
+  top: -14px;
+}
+.rightSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+.backToMenuContainer {
+  margin-bottom: 42px;
+  display: flex;
+  align-items: center;
+}
+.chevronLeft {
+  margin-right: 13px;
+}
+.backText {
+  width: 239px;
+  @include roboto-16-regular-1;
+  color: rgba(0, 0, 0, 1);
+  & .bjsCallAssistance8664257932Emphasis2 {
+    @include roboto-16-bold-1;
+    color: rgba(204, 0, 51, 1);
+  }
+}
+.sumupContainer {
+  margin-bottom: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.askedContainer {
+  margin-bottom: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.youveAsked {
+  width: 312px;
+  @include roboto-16-regular-1;
+  color: rgba(123, 123, 123, 1);
+  margin-bottom: 8px;
+}
+.iNeedToEditMyOrder {
+  @include roboto-16-bold-1;
+  color: rgba(0, 0, 0, 1);
+  margin-left: 1px;
+}
+.line9 {
+  margin-bottom: 26px;
+}
+.onceYouClickSubmitOrderOnTheChe {
+  width: 328px;
+  @include roboto-16-regular-1;
+  color: rgba(0, 0, 0, 1);
+  margin-bottom: 30px;
+}
+.assistanceContainer {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+.phoneButton {
+  background-color: $forest-green;
+  margin-right: 15px;
+  border-radius: 50%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+}
+.wouldYouLikeMeToShowYouHowToCan {
+  width: 328px;
+  margin-bottom: 12px;
+  @include roboto-16-regular-1;
+  color: rgba(0, 0, 0, 1);
+  & .wouldYouLikeMeToShowYouHowToCancelYourOrderEmphasis2 {
+    @include roboto-16-bold-1;
+    color: rgba(0, 0, 0, 1);
+  }
+}
+.orderButtonsContainer {
+  display: flex;
+  align-items: flex-start;
+}
+.redButton {
+  background-color: $crimson;
+  margin-right: 11px;
+  border-radius: 10px;
+  padding: 14px 42px;
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+}
+.buttonLabel {
+  @include roboto-16-bold-1;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+}
+.greenButton {
+  background-color: $forest-green;
+  border-radius: 10px;
+  padding: 14px 74px;
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+}
+.inputWrapper {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.input {
+  flex: 1;
+  align-self: stretch;
+  background-color: $lavender;
+  border-radius: 10px;
+  padding: 16px 67px 20px 20px;
+  position: relative;
+  @include roboto-16-regular-1;
+  color: rgba(165, 165, 165, 1);
+}
+.microphone {
+  position: absolute;
+  right: 17px;
+  top: 17px;
+}
+.sendButton {
+  background-color: $crimson;
+  border-radius: 50%;
+  padding: 17px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
